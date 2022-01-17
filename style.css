@@ -68,11 +68,12 @@ header {
 
 }
 
+/* First half of card */
+
 .flexA {
    
     flex-basis: 80%;
-    /* border: 1px solid black; */
-    /* border-radius: 15px; */
+    
 
 }
 
@@ -92,7 +93,7 @@ header {
     border: 0px;    
     background-color: var(--Light_grayish_cyan); 
     margin-bottom: 1.0em;   
-    /* font-weight: 700; */
+   cursor: pointer;
 
 }
 
@@ -122,19 +123,42 @@ p {
     color: var(--White);
     padding: .25em 1em;
     border: 0px;
-    border-radius: 10px;
+    
+    
 }
 
 .iiBut {
     background-color: var(--Strong_cyan);
     color: var(--Off_black);
+    cursor: pointer;
 
 }
 
 .iiiBut {
+    width: 100%;
+    font-size: var(--form_input_size);
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    border-radius: 10px;
     background-color: var(--Light_grayish_cyan);
     color: var(--Off_black);
+    text-align: right;
+    padding: 0 1em;
+    cursor: pointer;
+    border: 0px;
 
+}
+
+.iiiBut:hover{
+    border: 2px solid var(--Strong_cyan);
+}
+
+
+.people-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 .5em;
 }
 
 .number-people {
@@ -150,9 +174,26 @@ p {
     font-size: var(--form_input_size);
     font-family: "Space Mono", monospace;
     border: 0px;    
-    background-color: var(--Light_grayish_cyan);    
+    background-color: var(--Light_grayish_cyan); 
+       
     
 }
+/* If Zero is enterd in Number of People field */
+.no-zero {
+    color: transparent;
+}
+
+.no-zero-active {
+    color: red;
+}
+
+.number-people-active {
+    border: 1px solid red;
+}
+
+/* **************************** */
+
+/* Second half of card */
 
 .flexB {
     flex-basis: 80%;
@@ -191,7 +232,8 @@ p {
     border: 0px;
     border-radius: 5px;
     font-size: var(--normal_size);
-    font-weight: 400;
-    
+    font-weight: 400;    
     color: var(--Off_black);
+    cursor: pointer;
+
 }
