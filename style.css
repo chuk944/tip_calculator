@@ -52,6 +52,7 @@ header {
     display: block;
     width: 100%;
     padding: 2em;
+    margin-top: 8.0em;
     background-color: var(--White);
     border-radius: 15px;
 }
@@ -87,6 +88,10 @@ header {
     cursor: pointer;
 }
 
+.ticket-amount:hover {
+    border: 1px solid var(--Strong_cyan);
+}
+
 p {
     font-size: var(--p_size);
 }
@@ -111,6 +116,7 @@ p {
     color: var(--White);
     padding: .25em 1em;
     border: 0px;
+    border-radius: 10px;
 }
 
 .iiBut {
@@ -220,4 +226,33 @@ p {
     font-weight: 400;
     color: var(--Off_black);
     cursor: pointer;
+}
+
+@media only screen and (min-width:650px) {
+    .flex-box {
+        flex-direction: row;
+        gap: 20px;
+    }
+    header {
+        width: 90%;
+        max-width: 800px;
+        margin-top: 0px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    footer {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+    .reset {
+        margin-top: 10.5em;
+    }
+
+    .grid-button {     
+       grid-template-columns: 1fr 1fr 1fr;
+    }
 }
