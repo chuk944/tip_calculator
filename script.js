@@ -6,9 +6,6 @@ let calculator = {
   tipPercent: 0,
   numPeople: 0,
   results: function(){    
-    console.log(calculator.tipPercent);
-    console.log(calculator.ticketPrice);
-    console.log(calculator.numPeople);
 
     if (calculator.ticketPrice == 0 || calculator.tipPercent ==0)  {
       alert("Ticket Amount or Tip not selected.\n Please select both Ticket and Tip amount.");
@@ -20,8 +17,7 @@ let calculator = {
 
     document.getElementById("tipAmount").innerHTML = "$" + (tip  / this.numPeople).toFixed(2);
 
-    document.getElementById("totalTip").innerHTML = "$" + (total / this.numPeople).toFixed(2);
-   
+    document.getElementById("totalTip").innerHTML = "$" + (total / this.numPeople).toFixed(2);   
 
   }
   
@@ -45,15 +41,20 @@ document.getElementById("fifty").addEventListener("click", function() {tipFuncti
 });
 
 // custom input button
+document.getElementById("custom").addEventListener("change", function() {
+  customButton();
+});
 
 // number of people input
-
 document.getElementById("guests").addEventListener("change", function() {
  notZero();
 }); 
+// Reset input
+document.getElementById("reset").addEventListener("click", function() {
+  reset();
+}); 
  
 // ticket amount and tip percent sent to object
-
  function tipFunction(tip) {  
 
   let percent = tip;
@@ -62,7 +63,6 @@ document.getElementById("guests").addEventListener("change", function() {
   calculator.ticketPrice = document.getElementById("ticket-amount").value;
   
   notZero();  
-
 }
 
 // Number of people if not zero sent to object 
@@ -78,7 +78,20 @@ const notZero = () => {
     calculator.numPeople = document.getElementById("guests").value;
     calculator.results();
   
-  }
+  }  
+ }
+//  Custom input function
+ const customButton = () => {
+  let newCustom = document.getElementById("custom").value;
+  tipFunction(newCustom);
+ }
+//  Reset Function
+ const reset = () => {
+  document.getElementById("ticket-amount").value = null;
+  document.getElementById("custom").value = "custom";
+  document.getElementById("guests").value = null;
+  document.getElementById("tipAmount").innerHTML = "$" + "0.00";
+  document.getElementById("totalTip").innerHTML = "$" + "0.00";   
  }
 
 
