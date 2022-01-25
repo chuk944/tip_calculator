@@ -155,6 +155,11 @@ p {
   border: 2px solid var(--Strong_cyan);
 }
 
+.hover:hover {
+  background-color:cornflowerblue;
+  border: 1px solid black; 
+}
+
 .people-flex {
   display: flex;
   flex-direction: row;
