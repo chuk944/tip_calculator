@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/chuk944/tip_calculator)
+- Solution URL:(https://github.com/chuk944/tip_calculator)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 
@@ -53,8 +53,8 @@ Users should be able to:
 
 ### Useful resources
 
-- [Example resource 1](https://www.w3schools.com) - This is always helpfull to me.Both for learning new consepts or jogging my memory when I forget details about code.
-- [Example resource 2](https://stackoverflow.com) - Always Usefull for troubleshooting code, and learning a few new coding tricks.
+- (https://www.w3schools.com) - This is always helpfull to me.Both for learning new consepts or jogging my memory when I forget details about code.
+- (https://stackoverflow.com) - Always Usefull for troubleshooting code, and learning a few new coding tricks.
 
 
 
